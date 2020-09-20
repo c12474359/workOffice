@@ -1,0 +1,36 @@
+/* miniprogram/pages/publish/index.wxss */
+.container{
+  padding: 5px 10px;
+}
+.c-item{
+  display: flex;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.title{
+  width: 40px;
+}
+.c-item picker{
+  flex:1;
+  background-color: blanchedalmond;
+}
+.c-item input{
+  background-color: #FFFFFF;
+  width: 100%;
+}
+.c-item textarea{
+  width: 100%;
+  height: 100px;
+  background-color: #FFFFFF;
+}
+.picker{
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+.c-item button{
+  color: #FFFFFF;
+  width: 100px;
+  height: 40px;
+  background-color: skyblue;
+}

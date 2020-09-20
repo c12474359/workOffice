@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "statusBar": "/components/status/status",
+    "taskItem": "/components/task/task"
+  }
+}

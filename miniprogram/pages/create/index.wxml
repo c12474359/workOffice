@@ -1,0 +1,34 @@
+<view class="container">
+  <view wx:for="{{list}}" wx:key="index" class="c-item">
+    <view wx:if="{{item.label}}" class="title">{{item.label}}</view>
+    <block wx:if="{{item.type === 'date'}}">
+        <picker mode="date" id="{{index}}" value="{{item.value}}" start="{{item.start}}" end="{{item.end}}" bindchange="bindDateChange">
+        <view class="picker">{{item.value}}
+        </view>
+      </picker>
+    </block>
+    <block wx:if="{{item.type === 'time'}}">
+        <picker mode="time" id="{{index}}" value="{{item.value}}" start="00:00" end="24:00" bindchange="bindTimeChange">
+        <view class="picker">{{item.value}}</view>
+      </picker>
+    </block>
+    <block wx:if="{{item.type === 'text'}}">
+      <input type="text" id="{{index}}" bindinput="bindconfirm" class="text"></input>
+    </block>
+    <block wx:if="{{item.type === 'areatext'}}">
+      <textarea  id="{{index}}" bindinput="bindconfirm"></textarea>
+    </block>
+    <block wx:if="{{item.type === 'radio'}}">
+      <radio-group class="radio-group" id="{{index}}" bindchange="radioChange">
+         <radio class="radio" wx:for="{{item.items}}" wx:for-item="subItem" wx:for-index="subIndex" wx:key="subIndex" value="{{subItem.value}}" checked="{{subItem.value === item.value}}">
+              <text>{{subItem.value === item.value}}{{subItem.name}}</text>
+         </radio>
+      </radio-group>
+    </block>
+    <block wx:if="{{item.type === 'button'}}">
+      <view class="buttons">
+        <button wx:for="{{item.value}}" bindtap="onSubmit">{{item.name}}</button>
+      </view>
+    </block>
+  </view>
+</view>

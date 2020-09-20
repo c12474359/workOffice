@@ -1,0 +1,4 @@
+<!--components/task/task.wxml-->
+<view class="task-item" style="background-color:{{bgColor}};width:{{width+'px'}};height:{{height+'px'}}">
+  {{title}}
+</view>

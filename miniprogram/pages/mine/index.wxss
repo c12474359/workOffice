@@ -1,0 +1,102 @@
+/* pages/mine/index.wxss */
+.myView
+{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.myView .header-user
+{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 500rpx;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+.myView .header-nolog
+{
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  height: 400rpx;
+  background-color: #eee;
+  align-items: center;
+  justify-content: center;
+}
+.myView .header-left
+{
+  display: flex;
+  margin: 20rpx;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.myView .header-right
+{
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.myView .header-right text
+{
+  margin: 5rpx;
+  text-align: center;
+  width: 100%;
+  color: #999999;
+  font-size: 30rpx;
+}
+.myView .header-right text:first-child
+{
+  color: #000;
+}
+.myView .header-nolog text
+{
+  color: #999;
+  font-size: 30rpx;
+}
+.myView .header-user .user-icon,.myView .header-nolog button,.myView .header-nolog .user-icon
+{
+  border-radius: 100rpx 100rpx 100rpx 100rpx;
+  border: none;
+  padding: 0;
+  width:200rpx;
+  height: 200rpx;
+}
+.version-view-top{
+  border-top: solid 1rpx #eee;
+}
+.mine-item .item
+{
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  height: 100rpx;
+}
+.mine-item .item:first-child
+{
+  border-bottom: solid 1rpx #eee;
+  border-top: solid 1rpx #eee;
+}
+.mine-item .item:first-child text:first-child
+{
+  margin-left: 30rpx;
+  width: 50%;
+}
+.mine-item .item:first-child text:nth-child(2)
+{
+  color: #999;
+  margin-right: 50rpx;
+  width: 50%;
+  font-size: 26rpx;
+  text-align: right;
+}
+.mine-item .item:nth-child(2){
+  color:#999;
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+}

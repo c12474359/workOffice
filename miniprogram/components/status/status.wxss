@@ -1,0 +1,13 @@
+
+.s-item{
+  font-family: 'iconfont';
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.s-icon{
+  display: inline-block;
+  margin: 0 5px;
+  width: 15px;
+  height: 15px;
+}

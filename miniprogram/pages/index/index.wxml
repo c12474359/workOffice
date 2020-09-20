@@ -1,0 +1,25 @@
+<view class="container" catchtap="tap">
+  <statusBar class = "status" list="{{statusList}}"/>
+  <view class="main">
+    <view class="tool" style="width:{{toolBarWidth+'px'}};background:{{toolBgColor}};color:{{fontColor}}">
+    <view class="date-item" wx:for="{{dates}}" wx:key="index" style="height:{{cellH+'px'}}">
+    {{item}}
+    </view>
+    </view>
+    <view class="taskContainer" style="background-size:{{hourW+'px'}};">
+      <view class="timeline">
+        <view class="hour-cell" wx:for="{{cellHours}}" wx:key="index" style="width:{{cellW+'px'}}">
+          {{item}}
+        </view>
+      </view>
+      <view class="tasks" style="color:{{fontColor}}">
+          <view class="task-item" wx:for="{{tasks}}" wx:key="index" style="left:{{item.left+'px'}};top:{{item.top+'px'}};z-index:{{selectedId === item._id ? 100 : 1}}" id="{{item._id}}" bindlongtap="longTap" catchtap="tap">
+          <view class="action" style="height:{{cellH - 10+'px'}};background-color:{{statusList[item.check].color}};display:{{selectedId === item._id ? '' : 'none'}};left:{{selectedId === item._id ? item.wid - 6+'px' :  0+'px'}}">
+            <view class="iconfont icon-shanchu" bindtap="onDel"></view>
+          </view>
+          <taskItem width="{{item.wid}}" height="{{cellH - 10}}" title="{{item.title}}" bgColor="{{statusList[item.check].color}}"/>
+          </view>
+      </view>
+    </view>
+  </view>
+</view>

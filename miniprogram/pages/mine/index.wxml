@@ -1,0 +1,19 @@
+<view class="myView">
+  <view class="header-user" wx:if='{{initUser}}'>
+    <view class='header-left'>
+      <image class='user-icon' src='{{userInfo.avatarUrl}}'></image>
+    </view>
+    <view class='header-right'>
+        <text>{{userInfo.nickName}}</text>
+        <text>{{userInfo.gender==1?'男':'女'}}  |  {{userInfo.city}}</text>
+    </view>
+  </view>
+  <view class='header-nolog' wx:else>
+    <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGetUserInfo" plain='{{true}}'><image class='user-icon' src='/icons/nolog.png'></image></button>
+        <text>未登录</text>
+  </view>
+  <scroll-view class="mine-item" scroll-y='{{true}}'>
+  <view class='item version-view-top'><text>版本</text><text class="version">v1.0.0</text></view>
+  <view class='item' bindtap='onExit_'><text>退出登录</text></view>
+  </scroll-view>
+</view>

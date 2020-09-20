@@ -1,0 +1,5 @@
+<!--components/status.wxml-->
+<view wx:for="{{list}}" wx:key="index" class="s-item">
+    <view>{{item.title}}</view>
+    <view class="s-icon" style="background:{{item.color}}"></view>
+</view>
